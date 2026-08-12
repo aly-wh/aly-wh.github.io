@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aly Wheale CV</title>
+<meta name="description" content="Aly Wheale, contract product designer. Design systems, enterprise and data-dense products, AI/ML tooling." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage-300: #e3d68a;
+    --sage-400: #c9ae13;
+    --sage-500: #8a7409;
+    --sage-600: #6e5c06;
+    --rose-300: #c4c5c7;
+    --rose-400: #939597;
+    --rose-500: #6b6c70;
+    --text: #2e2e30;
+    --text-soft: #444;
+    --text-muted: #5f6063;
+    --bg: #f7f6f3;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(160deg, #f7f6f3 0%, #fbfaf5 50%, #f5f4ef 100%);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .download-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 1.25rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: .875rem;
+    font-weight: 600;
+    color: #1e1e20;
+    background: #f5df4d;
+    box-shadow: 0 4px 20px rgba(60,60,64,.22);
+    transition: transform .15s;
+  }
+  .download-btn:hover { transform: scale(1.05); }
+  .download-btn:active { transform: scale(.96); }
+  .download-btn:focus-visible { outline: 3px solid var(--sage-600); outline-offset: 3px; }
+
+  header { position: relative; overflow: hidden; }
+
+  .header-band {
+    background: linear-gradient(135deg, #2f2f33 0%, #45454a 42%, #6b6c70 74%, #f5df4d 100%);
+    padding: 3.5rem 2.5rem 3rem;
+    position: relative;
+  }
+  .header-blob-1 {
+    position: absolute; top: 0; right: 0;
+    width: 20rem; height: 20rem; border-radius: 50%;
+    background: #fff; opacity: .2; filter: blur(48px);
+    transform: translate(30%,-30%);
+  }
+  .header-blob-2 {
+    position: absolute; bottom: 0; left: 5rem;
+    width: 12rem; height: 12rem; border-radius: 50%;
+    background: #f5df4d; opacity: .15; filter: blur(32px);
+    transform: translateY(40%);
+  }
+  .header-inner { position: relative; max-width: 960px; margin: 0 auto; }
+
+  .header-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.75rem;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -.02em;
+    margin-bottom: .75rem;
+  }
+  .header-subtitle {
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+    margin-bottom: 2rem;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .chip {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .375rem 1rem;
+    border-radius: 9999px;
+    font-size: .8rem; font-weight: 500; color: #fff;
+    background: rgba(0,0,0,.46);
+  }
+  .chip-icon { font-size: .7rem; opacity: .8; }
+
+  .contact-bar {
+    background: rgba(147,149,151,.12);
+    border-bottom: 1px solid rgba(147,149,151,.15);
+    padding: .75rem 2.5rem;
+  }
+  .contact-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+  }
+  .contact-inner a {
+    display: flex; align-items: center; gap: .5rem;
+    font-size: .85rem; font-weight: 500;
+    color: var(--sage-600); text-decoration: none;
+    transition: color .15s;
+  }
+  .contact-inner a:hover { color: #55565a; }
+  .contact-inner a:focus-visible { outline: 2px solid var(--sage-600); outline-offset: 2px; }
+
+  .body-grid {
+    max-width: 960px; margin: 0 auto;
+    padding: 2.5rem 2.5rem 2rem;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    grid-template-areas: "side main";
+    gap: 2.5rem;
+  }
+  aside { grid-area: side; display: flex; flex-direction: column; gap: 1.75rem; }
+  main { grid-area: main; display: flex; flex-direction: column; gap: 2.25rem; }
+
+  .side-section h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: .7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--sage-600);
+    border-bottom: 1px solid rgba(147,149,151,.4);
+    padding-bottom: .5rem;
+    margin-bottom: .75rem;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: .375rem; list-style: none; }
+  .tag {
+    display: inline-block;
+    padding: .25rem .625rem;
+    border-radius: 9999px;
+    font-size: .72rem; font-weight: 500;
+  }
+  .tag-sage {
+    background: rgba(147,149,151,.18);
+    color: var(--sage-600);
+    border: 1px solid rgba(147,149,151,.4);
+  }
+  .tag-rose {
+    background: rgba(245,223,77,.18);
+    color: #55565a;
+    border: 1px solid rgba(245,223,77,.4);
+  }
+
+  .lang-row { margin-bottom: .5rem; }
+  .lang-labels { display: flex; justify-content: space-between; font-size: .72rem; margin-bottom: .25rem; }
+  .lang-labels .lang-name { font-weight: 500; }
+  .lang-labels .lang-level { color: var(--sage-600); }
+  .lang-track { height: 6px; border-radius: 9999px; background: #e4e3de; }
+  .lang-fill { height: 6px; border-radius: 9999px; background: linear-gradient(90deg, #f5df4d, #939597); }
+
+  .edu-block { font-size: .85rem; line-height: 1.6; color: #444; }
+  .edu-block strong { display: block; font-weight: 600; color: var(--text); }
+  .edu-block .edu-school { color: var(--sage-600); }
+  .edu-block .edu-year { font-size: .75rem; color: var(--text-muted); }
+
+  .prose-sm { font-size: .83rem; line-height: 1.65; color: #555; }
+
+  .main-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--text);
+    letter-spacing: -.01em;
+    margin-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+  .h2-rule {
+    display: inline-block;
+    width: 2.5rem; height: 2px; border-radius: 9999px;
+    background: linear-gradient(90deg, #f5df4d, #939597);
+    flex-shrink: 0;
+  }
+
+  .profile-text { font-size: .95rem; line-height: 1.75; color: #3a3a3a; }
+  .profile-text strong { font-weight: 600; color: var(--sage-600); }
+
+  .engagements { display: flex; flex-direction: column; gap: .625rem; list-style: none; }
+  .eng-card {
+    display: flex; gap: .75rem;
+    padding: .875rem 1rem;
+    border-radius: 1rem;
+    background: rgba(255,255,255,.7);
+    border: 1px solid rgba(147,149,151,.3);
+  }
+  .eng-dot {
+    width: .5rem; height: .5rem; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, #f5df4d, #c9ae13);
+    margin-top: .35rem;
+  }
+  .eng-card p { font-size: .85rem; line-height: 1.65; color: #444; }
+  .eng-card strong { font-weight: 600; color: var(--sage-600); }
+
+  .exp-block { margin-bottom: .25rem; }
+  .exp-header {
+    display: flex; align-items: baseline;
+    justify-content: space-between; gap: .5rem;
+    margin-bottom: .625rem; flex-wrap: wrap;
+  }
+  .exp-role { font-weight: 600; font-size: .95rem; color: #1e1e1e; }
+  .exp-company {
+    display: inline-block;
+    padding: .15rem .625rem;
+    border-radius: 9999px;
+    font-size: .72rem; font-weight: 500;
+    margin-left: .375rem;
+  }
+  .exp-company-sage { background: rgba(147,149,151,.15); color: var(--sage-600); }
+  .exp-company-rose { background: rgba(245,223,77,.15); color: #55565a; }
+  .exp-period { font-size: .72rem; font-weight: 500; color: var(--text-muted); white-space: nowrap; }
+
+  .exp-bullets { display: flex; flex-direction: column; gap: .5rem; list-style: none; }
+  .exp-bullets li { display: flex; gap: .625rem; font-size: .83rem; line-height: 1.65; color: #444; }
+  .exp-bullets li .bull-dot {
+    width: .375rem; height: .375rem; border-radius: 50%; flex-shrink: 0;
+    opacity: .7; margin-top: .45rem;
+  }
+  .bull-dot-sage { background: var(--sage-500); }
+  .bull-dot-rose { background: var(--rose-400); }
+  .exp-bullets li strong { font-weight: 600; color: var(--text); }
+
+  .exp-divider { height: 1px; background: rgba(147,149,151,.2); margin: 1.75rem 0; }
+
+  .earlier-note {
+    padding: .875rem 1rem; border-radius: 1rem;
+    background: rgba(255,255,255,.5);
+    border: 1px solid rgba(147,149,151,.25);
+    font-size: .82rem; color: #555;
+  }
+  .earlier-note strong { font-weight: 600; color: #444; }
+
+  footer { max-width: 960px; margin: 0 auto; padding: 0 2.5rem 2.5rem; }
+  .footer-rule {
+    height: 1px;
+    background: linear-gradient(90deg, #f5df4d, #939597, transparent);
+    margin-bottom: 1.25rem;
+  }
+  footer p { font-size: .72rem; text-align: center; color: var(--text-muted); }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .download-btn { display: none !important; }
+
+    .header-band { padding: 2.4rem 16mm 2rem; }
+    .header-inner { max-width: none; }
+    .header-name { font-size: 2.75rem; margin-bottom: .5rem; }
+    .header-subtitle { font-size: .95rem; margin-bottom: 1.15rem; }
+    .chips { gap: .4rem; }
+    .chip { font-size: .68rem; padding: .3rem .85rem; }
+    .contact-bar { padding: .6rem 16mm; }
+    .contact-inner { max-width: none; gap: 1.1rem; }
+    .contact-inner a { font-size: .8rem; }
+
+    .body-grid {
+      display: block;
+      max-width: none;
+      padding: 1.6rem 16mm 0;
+    }
+    main { display: block; }
+    aside { display: block; margin-top: 1.5rem; }
+
+    main > .main-section { margin-bottom: 1.5rem; }
+    aside > .side-section { margin-bottom: 1.1rem; }
+
+    .main-section h2 { font-size: 1.35rem; margin-bottom: .8rem; break-after: avoid; }
+    .side-section h3 { break-after: avoid; }
+    .exp-header { break-after: avoid; }
+
+    .exp-block, .eng-card, .side-section, .earlier-note,
+    .exp-bullets li, .engagements li, .lang-row, .edu-block { break-inside: avoid; }
+
+    .exp-divider { margin: 1.1rem 0; }
+    .profile-text { font-size: .9rem; line-height: 1.65; }
+    .eng-card p, .exp-bullets li { font-size: .8rem; line-height: 1.55; }
+
+    footer { max-width: none; padding: 1.2rem 16mm 1.4rem; }
+  }
+
+  @media (max-width: 720px) {
+    .header-name { font-size: 2.5rem; }
+    .body-grid { grid-template-columns: 1fr; grid-template-areas: "main" "side"; }
+  }
+</style>
+</head>
+<body>
+
+<button class="download-btn" onclick="window.print()">↓ Download PDF</button>
+
+<header>
+  <div class="header-band">
+    <div class="header-blob-1" aria-hidden="true"></div>
+    <div class="header-blob-2" aria-hidden="true"></div>
+    <div class="header-inner">
+      <h1 class="header-name">Aly Wheale</h1>
+      <p class="header-subtitle">Contract Product Designer · Design Systems · Enterprise &amp; Data-Dense Products · AI/ML Tooling</p>
+      <div class="chips">
+        <span class="chip"><span class="chip-icon" aria-hidden="true">◷</span> Available from mid-September 2026 · 20&ndash;30 hrs/wk · contract or part-time</span>
+        <span class="chip"><span class="chip-icon" aria-hidden="true">◎</span> Greater Boston, MA · fully remote, US</span>
+        <span class="chip"><span class="chip-icon" aria-hidden="true">✦</span> US permanent resident · no sponsorship required</span>
+      </div>
+    </div>
+  </div>
+  <div class="contact-bar">
+    <div class="contact-inner">
+      <a href="mailto:alywheale@gmail.com"><span aria-hidden="true">✉</span> alywheale@gmail.com</a>
+      <a href="tel:2093990400"><span aria-hidden="true">☎</span> (209) 399-0400</a>
+      <a href="https://alywheale.com"><span aria-hidden="true">↗</span> alywheale.com</a>
+    </div>
+  </div>
+</header>
+
+<div class="body-grid">
+
+  <main>
+
+    <section class="main-section">
+      <h2>Profile <span class="h2-rule" aria-hidden="true"></span></h2>
+      <p class="profile-text">
+        Product designer with <strong>11 years in enterprise software</strong> at HP, Micro Focus and Smarsh. I specialise in the parts of a product that are hard to make simple: design systems, complex search and filtering, compliance workflows and machine-learning tooling. Former front-end engineer: I read the codebase and hand over work engineers can build from.
+      </p>
+    </section>
+
+    <section class="main-section">
+      <h2>Engagements I Take On <span class="h2-rule" aria-hidden="true"></span></h2>
+      <ul class="engagements">
+        <li class="eng-card">
+          <div class="eng-dot" aria-hidden="true"></div>
+          <p><strong>Design systems:</strong> Building, extending or auditing component libraries; variants and states; documentation; migrating a product onto an existing system.</p>
+        </li>
+        <li class="eng-card">
+          <div class="eng-dot" aria-hidden="true"></div>
+          <p><strong>Complex feature design:</strong> Search and filtering, faceted query builders, dense tables, dashboards, bulk actions, multi-step wizards.</p>
+        </li>
+        <li class="eng-card">
+          <div class="eng-dot" aria-hidden="true"></div>
+          <p><strong>AI/ML tooling interfaces:</strong> Model evaluation and comparison, classification review, human-in-the-loop workflows, communicating confidence and error.</p>
+        </li>
+        <li class="eng-card">
+          <div class="eng-dot" aria-hidden="true"></div>
+          <p><strong>Design-to-development handoff:</strong> Embedded with front-end teams; prototypes over specifications.</p>
+        </li>
+        <li class="eng-card">
+          <div class="eng-dot" aria-hidden="true"></div>
+          <p><strong>Concept &amp; requirements visualisation:</strong> Turning a written requirement or rough idea into wireframes quickly, so teams can argue about something concrete.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="main-section">
+      <h2>Experience <span class="h2-rule" aria-hidden="true"></span></h2>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div><span class="exp-role">Independent Designer &amp; Illustrator</span><span class="exp-company exp-company-sage">Self-employed</span></div>
+          <span class="exp-period">May 2025 to Present</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span>Contract illustration for Derry Comics; scoping, quoting, revision cycles, delivery to deadline.</span></li>
+        </ul>
+      </div>
+
+      <div class="exp-divider" aria-hidden="true"></div>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div><span class="exp-role">Senior UI Designer</span><span class="exp-company exp-company-sage">Smarsh</span></div>
+          <span class="exp-period">Feb 2022 to Sep 2024</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span><strong>Search redesign (2024):</strong> Rebuilt Enterprise Archive search around a single typeahead filter input parsing operators, units and file types into structured filters, with editable filter chips, pinnable saved searches, column toggling and result refinement. Wrote the release documentation.</span></li>
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span><strong>ML model evaluation analytics:</strong> Interface for comparing up to four model versions across true/false positive and negative rates on communications datasets, with charted summaries and per-message comparison.</span></li>
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span><strong>Review and supervision workflow:</strong> Faceted message search, bulk review actions, flagging for violation, privilege and further review.</span></li>
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span><strong>Case management and policy engine:</strong> Legal hold, custodians, case states; drag-and-drop policy prioritisation with dependency and short-circuit handling.</span></li>
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span><strong>Design system:</strong> Contributed components and variants to the Angular-based Integrated Design System.</span></li>
+        </ul>
+      </div>
+
+      <div class="exp-divider" aria-hidden="true"></div>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div><span class="exp-role">Design Consultant</span><span class="exp-company exp-company-rose">Soho Squared</span></div>
+          <span class="exp-period">2019 to 2022, concurrent</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bull-dot bull-dot-rose" aria-hidden="true"></span><span><strong>Speech² speech-analytics platform:</strong> Call search with transcript, waveform and sentiment; agent performance dashboards; real-time Agent Assist with sentiment alerts and de-escalation prompts; entity and policy authoring with regex conditions.</span></li>
+          <li><span class="bull-dot bull-dot-rose" aria-hidden="true"></span><span><strong>Agent evaluation and appeals:</strong> Scoring forms with regulation-critical questions, review queues and a supervisor appeal workflow. Figma component sets with variants; identity and colour system.</span></li>
+        </ul>
+      </div>
+
+      <div class="exp-divider" aria-hidden="true"></div>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div><span class="exp-role">UX Lead / Senior UX Designer</span><span class="exp-company exp-company-rose">Micro Focus (now OpenText)</span></div>
+          <span class="exp-period">2017 to Feb 2022</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bull-dot bull-dot-rose" aria-hidden="true"></span><span>Led design across Digital Safe (private-cloud archiving at scale), Search Optimiser, Answer Bank and Find enterprise search. Ran a team.</span></li>
+          <li><span class="bull-dot bull-dot-rose" aria-hidden="true"></span><span>Defined the two-stage UX process used inside the development lifecycle, adopted across product teams.</span></li>
+        </ul>
+      </div>
+
+      <div class="exp-divider" aria-hidden="true"></div>
+
+      <div class="exp-block">
+        <div class="exp-header">
+          <div><span class="exp-role">Software Engineer to UX Lead</span><span class="exp-company exp-company-sage">HP / Hewlett Packard Enterprise</span></div>
+          <span class="exp-period">2013 to Jan 2017</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span>Front-end engineer, later UX lead, on HPE IDOL big-data and machine-learning analytics applications.</span></li>
+          <li><span class="bull-dot bull-dot-sage" aria-hidden="true"></span><span>Designed and shipped the Search Augmentation Tool (successor to Autonomy Business Console) and IDOL Answer Bank.</span></li>
+        </ul>
+      </div>
+
+      <div class="exp-divider" aria-hidden="true"></div>
+
+      <div class="earlier-note">
+        <strong>Earlier</strong> · Leto Lab · ECS STACS · University of Southampton. UI Software Engineer; System Administrator; UX Designer (research contract) · 2011 to 2013
+      </div>
+
+    </section>
+
+  </main>
+
+  <aside>
+
+    <h2 class="sr-only">Skills</h2>
+
+    <div class="side-section">
+      <h3>Design</h3>
+      <ul class="tags">
+        <li class="tag tag-sage">Design systems<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Component libraries<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Interaction design<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Information architecture<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Data-dense dashboards<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Faceted filtering<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Progressive-disclosure wizards<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Wireframing (lo-fi to hi-fi)<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Prototyping<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Accessibility-conscious design<span class="sr-only">. </span></li>
+      </ul>
+    </div>
+
+    <div class="side-section">
+      <h3>Research</h3>
+      <ul class="tags">
+        <li class="tag tag-rose">Personas<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">User stories<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Market &amp; competitor analysis<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Usability testing<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Empathy mapping<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Storyboarding<span class="sr-only">. </span></li>
+      </ul>
+    </div>
+
+    <div class="side-section">
+      <h3>Tools</h3>
+      <ul class="tags">
+        <li class="tag tag-sage">Figma<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Sketch<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Balsamiq<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">InVision<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Adobe Illustrator<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Photoshop<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Procreate<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Jira<span class="sr-only">, </span></li>
+        <li class="tag tag-sage">Confluence<span class="sr-only">. </span></li>
+      </ul>
+    </div>
+
+    <div class="side-section">
+      <h3>Domains</h3>
+      <ul class="tags">
+        <li class="tag tag-rose">Compliance &amp; archiving<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Enterprise search<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">ML/AI tooling<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Speech analytics<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">NLP &amp; conversational AI<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Contact-centre QM<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">Financial services<span class="sr-only">, </span></li>
+        <li class="tag tag-rose">B2B SaaS<span class="sr-only">. </span></li>
+      </ul>
+    </div>
+
+    <div class="side-section">
+      <h3>Languages</h3>
+      <div class="lang-row">
+        <div class="lang-labels"><span class="lang-name">English</span><span class="lang-level">Fluent</span></div>
+        <div class="lang-track" aria-hidden="true"><div class="lang-fill" style="width:100%"></div></div>
+      </div>
+      <div class="lang-row">
+        <div class="lang-labels"><span class="lang-name">Russian</span><span class="lang-level">Fluent</span></div>
+        <div class="lang-track" aria-hidden="true"><div class="lang-fill" style="width:100%"></div></div>
+      </div>
+      <div class="lang-row">
+        <div class="lang-labels"><span class="lang-name">Spanish</span><span class="lang-level">Intermediate</span></div>
+        <div class="lang-track" aria-hidden="true"><div class="lang-fill" style="width:55%"></div></div>
+      </div>
+    </div>
+
+    <div class="side-section">
+      <h3>Education</h3>
+      <div class="edu-block">
+        <strong>MEng Computer Science</strong>
+        HCI &amp; Cognitive Behaviour<br />
+        <span class="edu-school">University of Southampton</span><br />
+        <span class="edu-year">2009 to 2013</span>
+      </div>
+    </div>
+
+    <div class="side-section">
+      <h3>Engineering Background</h3>
+      <p class="prose-sm">CS degree; shipped production front-end code at HP/HPE: JavaScript, HTML/CSS, Java, Python, Git. Code-literate: I read a codebase and judge what a change costs.</p>
+    </div>
+
+    <div class="side-section">
+      <h3>AI-Assisted Work</h3>
+      <p class="prose-sm">Prototyping and proof-of-concept builds with AI tooling. Design for ML products: model evaluation, classification review, sentiment and NLP output.</p>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-rule" aria-hidden="true"></div>
+  <p>alywheale@gmail.com · (209) 399-0400 · alywheale.com · Greater Boston, MA · available from mid-September 2026</p>
+</footer>
+
+</body>
+</html>
