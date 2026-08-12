@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aly Wheale Portfolio</title>
-<meta name="description" content="Aly Wheale, product designer. Selected work in design systems, enterprise search, compliance workflows and machine-learning tooling." />
+<meta name="description" content="Aly Wheale, product design consultant. Selected work in design systems, enterprise search, compliance workflows and machine-learning tooling." />
 <meta property="og:title" content="Aly Wheale Portfolio" />
 <meta property="og:description" content="Selected work in design systems, enterprise search, compliance workflows and machine-learning tooling." />
 <meta property="og:type" content="website" />
@@ -322,7 +322,7 @@
     <div class="header-blob-2" aria-hidden="true"></div>
     <div class="header-inner">
       <h1 class="header-name">Selected Work</h1>
-      <p class="header-subtitle">Aly Wheale · Product Designer · Design Systems · Enterprise &amp; Data-Dense Products · AI/ML Tooling</p>
+      <p class="header-subtitle">Aly Wheale · Product Design Consultant · Design Systems · Enterprise &amp; Data-Dense Products · AI/ML Tooling</p>
       <div class="chips">
         <span class="chip"><span class="chip-icon" aria-hidden="true">◷</span> 11 years in enterprise software</span>
         <span class="chip"><span class="chip-icon" aria-hidden="true">◎</span> HP · Micro Focus · Smarsh · Soho Squared</span>
@@ -342,7 +342,7 @@
 <div class="wrap">
 
   <p class="intro">
-    I design the parts of a product that are hard to make simple. Most of my work has been in <strong>compliance, enterprise search and machine-learning tooling</strong>: places where the data is dense, the consequences of a wrong answer are real, and the person using the software is an expert with no patience for a tool that gets in the way. I started as a front-end engineer, which still shapes how I work. What follows is five projects and the reasoning behind them.
+    I consult on the parts of a product that are hard to make simple. Most of my work has been in <strong>compliance, enterprise search and machine-learning tooling</strong>: places where the data is dense, the consequences of a wrong answer are real, and the person using the software is an expert with no patience for a tool that gets in the way. I started as a front-end engineer, which still shapes how I work. What follows is five projects and the reasoning behind them.
   </p>
 
   <nav class="contents" aria-label="Contents">
@@ -376,8 +376,8 @@
       <p>Search is not a convenience feature in a product like this. It is the product. If a compliance officer cannot find a message, the firm cannot answer the regulator.</p>
 
       <figure>
-        <img src="images/01-search-hero.jpg" alt="Advanced search screen with filter fields and a recent searches panel" loading="lazy" />
-        <figcaption>Advanced search, with recent and saved searches held alongside the query rather than behind a menu.</figcaption>
+        <img src="images/01-search-before.jpg" alt="Redesigned message search with content, people, keywords, files and date in a single column" loading="lazy" />
+        <figcaption>After: message search. One column, larger targets, and recent and saved searches held beside the query instead of behind a menu.</figcaption>
       </figure>
 
       <h3>The problem</h3>
@@ -401,8 +401,12 @@
       <p>Everything typed is always offered as a plain word or phrase search. That was the safety net: no input is ever rejected, and the simplest interpretation is always available. On top of that, the input recognises patterns and offers the structured filter that matches.</p>
 
       <figure>
-        <img src="images/01-search-before.jpg" alt="The earlier sectioned search form with collapsed panels" loading="lazy" />
-        <figcaption>Before: the sectioned form. Content, people, keywords, files and dates each behind their own expandable panel.</figcaption>
+        <div class="fig-grid fig-grid-3">
+          <img src="images/01-tab-message.jpg" alt="Previous message tab, a dense form of fields" loading="lazy" />
+          <img src="images/01-tab-review.jpg" alt="Previous review tab with status, flag and privilege filters" loading="lazy" />
+          <img src="images/01-tab-advanced.jpg" alt="Previous advanced tab with system-level fields" loading="lazy" />
+        </div>
+        <figcaption>Before: the interface as it was. Three tabs, each a dense form, with no view of the query as a whole and no sight of previous searches.</figcaption>
       </figure>
 
       <h3>Key decisions</h3>
@@ -419,12 +423,8 @@
       </div>
 
       <figure>
-        <div class="fig-grid fig-grid-3">
-          <img src="images/01-tab-message.jpg" alt="Message search tab" loading="lazy" />
-          <img src="images/01-tab-review.jpg" alt="Review state filters" loading="lazy" />
-          <img src="images/01-tab-advanced.jpg" alt="Advanced technical filters" loading="lazy" />
-        </div>
-        <figcaption>Three search modes. Message for content and people, Review for compliance state, Advanced for system-level fields.</figcaption>
+        <img src="images/01-search-hero.jpg" alt="Redesigned advanced search with a repeatable field and value filter builder" loading="lazy" />
+        <figcaption>After: advanced search. The repeatable field and value builder lets a query grow a row at a time rather than filling a fixed form.</figcaption>
       </figure>
 
       <h3>Outcome</h3>
