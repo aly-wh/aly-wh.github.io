@@ -237,6 +237,7 @@
   }
 
   .closing { padding: 3rem 0 0; border-top: 1px solid rgba(147,149,151,.35); margin-top: 3rem; }
+  .closing-top { padding: 2rem 0 0; border-top: none; margin-top: 0; }
   .closing h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 1.7rem; margin-bottom: 1rem;
@@ -298,7 +299,8 @@
     .pull, figure, .stage, .points li, .case-meta { break-inside: avoid; }
     figure img { max-height: 165mm; object-fit: contain; }
 
-    .closing { break-before: page; padding-top: 1.6rem; margin-top: 0; border-top: none; }
+    .closing { padding-top: 1.6rem; margin-top: 0; border-top: none; }
+    .case:first-of-type { break-before: page; }
     footer { padding-top: 1.2rem; }
   }
 
@@ -345,6 +347,37 @@
     I consult on the parts of a product that are hard to make simple. Most of my work has been in <strong>compliance, enterprise search and machine-learning tooling</strong>: places where the data is dense, the consequences of a wrong answer are real, and the person using the software is an expert with no patience for a tool that gets in the way. I started as a front-end engineer, which still shapes how I work. What follows is five projects and the reasoning behind them.
   </p>
 
+  <section class="closing closing-top" id="process">
+    <h2>How I work <span class="h2-rule" aria-hidden="true"></span></h2>
+    <ul class="stages">
+      <li class="stage">
+        <div class="stage-dot" aria-hidden="true"></div>
+        <p><strong>Product definition.</strong> Defining the thing and its requirements. Analysing what has been asked for, consulting on feasibility, assessing timeframes and resources before anyone commits.</p>
+      </li>
+      <li class="stage">
+        <div class="stage-dot" aria-hidden="true"></div>
+        <p><strong>Research.</strong> Product, context, market, target users and existing competition. Support tickets and sales feedback where direct user access is limited, which in enterprise it usually is.</p>
+      </li>
+      <li class="stage">
+        <div class="stage-dot" aria-hidden="true"></div>
+        <p><strong>Analysis and persona building.</strong> Turning that into something a team can design against: personas, user stories, empathy maps, storyboards.</p>
+      </li>
+      <li class="stage">
+        <div class="stage-dot" aria-hidden="true"></div>
+        <p><strong>Ideation.</strong> Workflows and low-fidelity wireframes, fast and rough, so the argument happens early and cheaply.</p>
+      </li>
+      <li class="stage">
+        <div class="stage-dot" aria-hidden="true"></div>
+        <p><strong>Prototyping.</strong> High-fidelity design and a working prototype where the interaction is the point rather than the layout.</p>
+      </li>
+      <li class="stage">
+        <div class="stage-dot" aria-hidden="true"></div>
+        <p><strong>Testing.</strong> With whoever I can reach: niche user groups, focus groups of existing clients and subject-matter experts, usability sessions.</p>
+      </li>
+    </ul>
+    <p style="margin-top:1.1rem">I have also defined how design fits into the development lifecycle: a two-stage process taking client and market requirements through brainstorming and focus-group feedback to locked wireframes and epics, then into design stories with signed-off mockups. It was adopted across product teams at Micro Focus.</p>
+  </section>
+
   <nav class="contents" aria-label="Contents">
     <h2>Contents</h2>
     <ol>
@@ -354,7 +387,6 @@
       <li><a href="#case-04"><span class="num">04</span><span>Scoring, appeals and the rule that sends you to zero</span></a></li>
       <li><a href="#case-05"><span class="num">05</span><span>Replacing a tool people had given up on</span></a></li>
       <li><a href="#supporting"><span class="num">06</span><span>Supporting work</span></a></li>
-      <li><a href="#process"><span class="num">07</span><span>How I work</span></a></li>
     </ol>
   </nav>
 
@@ -672,36 +704,6 @@
 
   </div>
 
-  <section class="closing" id="process">
-    <h2>How I work <span class="h2-rule" aria-hidden="true"></span></h2>
-    <ul class="stages">
-      <li class="stage">
-        <div class="stage-dot" aria-hidden="true"></div>
-        <p><strong>Product definition.</strong> Defining the thing and its requirements. Analysing what has been asked for, consulting on feasibility, assessing timeframes and resources before anyone commits.</p>
-      </li>
-      <li class="stage">
-        <div class="stage-dot" aria-hidden="true"></div>
-        <p><strong>Research.</strong> Product, context, market, target users and existing competition. Support tickets and sales feedback where direct user access is limited, which in enterprise it usually is.</p>
-      </li>
-      <li class="stage">
-        <div class="stage-dot" aria-hidden="true"></div>
-        <p><strong>Analysis and persona building.</strong> Turning that into something a team can design against: personas, user stories, empathy maps, storyboards.</p>
-      </li>
-      <li class="stage">
-        <div class="stage-dot" aria-hidden="true"></div>
-        <p><strong>Ideation.</strong> Workflows and low-fidelity wireframes, fast and rough, so the argument happens early and cheaply.</p>
-      </li>
-      <li class="stage">
-        <div class="stage-dot" aria-hidden="true"></div>
-        <p><strong>Prototyping.</strong> High-fidelity design and a working prototype where the interaction is the point rather than the layout.</p>
-      </li>
-      <li class="stage">
-        <div class="stage-dot" aria-hidden="true"></div>
-        <p><strong>Testing.</strong> With whoever I can reach: niche user groups, focus groups of existing clients and subject-matter experts, usability sessions.</p>
-      </li>
-    </ul>
-    <p style="margin-top:1.1rem">I have also defined how design fits into the development lifecycle: a two-stage process taking client and market requirements through brainstorming and focus-group feedback to locked wireframes and epics, then into design stories with signed-off mockups. It was adopted across product teams at Micro Focus.</p>
-  </section>
 
 </div>
 
