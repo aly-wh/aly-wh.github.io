@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aly Wheale, Design Consulting</title>
+<meta name="description" content="Design consulting for enterprise and data-dense products. Design system audits, UX audits, AI and ML tooling interfaces, concept sprints and embedded design support." />
+<meta property="og:title" content="Aly Wheale, Design Consulting" />
+<meta property="og:description" content="Design consulting for enterprise and data-dense products. Fixed-scope engagements from mid-September 2026." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage-300: #e3d68a;
+    --sage-400: #c9ae13;
+    --sage-500: #8a7409;
+    --sage-600: #6e5c06;
+    --rose-300: #c4c5c7;
+    --rose-400: #939597;
+    --rose-500: #6b6c70;
+    --rose-700: #55565a;
+    --text: #2e2e30;
+    --text-soft: #444;
+    --text-muted: #5f6063;
+    --bg: #f7f6f3;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(160deg, #f7f6f3 0%, #fbfaf5 50%, #f5f4ef 100%);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  .skip-link {
+    position: absolute; left: -9999px;
+    background: #fff; color: var(--sage-600);
+    padding: .75rem 1.25rem; z-index: 100; border-radius: 0 0 .5rem 0;
+    font-weight: 600;
+  }
+  .skip-link:focus { left: 0; top: 0; }
+
+  header { position: relative; overflow: hidden; }
+
+  .header-band {
+    background: linear-gradient(135deg, #2f2f33 0%, #45454a 42%, #6b6c70 74%, #f5df4d 100%);
+    padding: 3.5rem 2.5rem 3rem;
+    position: relative;
+  }
+  .header-blob-1 {
+    position: absolute; top: 0; right: 0;
+    width: 20rem; height: 20rem; border-radius: 50%;
+    background: #fff; opacity: .2; filter: blur(48px);
+    transform: translate(30%,-30%);
+  }
+  .header-blob-2 {
+    position: absolute; bottom: 0; left: 5rem;
+    width: 12rem; height: 12rem; border-radius: 50%;
+    background: #f5df4d; opacity: .15; filter: blur(32px);
+    transform: translateY(40%);
+  }
+  .header-inner { position: relative; max-width: 880px; margin: 0 auto; }
+
+  .header-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.25rem; color: #fff; line-height: 1.05;
+    letter-spacing: -.02em; margin-bottom: .75rem;
+  }
+  .header-subtitle {
+    color: #fff; font-size: 1.05rem; font-weight: 400;
+    letter-spacing: .04em; margin-bottom: 2rem; max-width: 46ch;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .chip {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .375rem 1rem; border-radius: 9999px;
+    font-size: .8rem; font-weight: 500; color: #fff;
+    background: rgba(0,0,0,.46);
+  }
+
+  .contact-bar {
+    background: rgba(147,149,151,.12);
+    border-bottom: 1px solid rgba(147,149,151,.15);
+    padding: .75rem 2.5rem;
+  }
+  .contact-inner {
+    max-width: 880px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    font-size: .82rem;
+  }
+  .contact-inner a { color: var(--sage-600); text-decoration: none; font-weight: 500; }
+  .contact-inner a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 2.75rem 2.5rem 2rem; }
+
+  .intro {
+    font-size: 1.02rem; line-height: 1.75; color: var(--text-soft);
+    margin-bottom: 2.25rem; max-width: 66ch;
+  }
+  .intro strong { font-weight: 600; color: var(--sage-600); }
+
+  h2.sec {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.65rem; margin: 2.5rem 0 1.25rem;
+    display: flex; align-items: center; gap: .9rem;
+  }
+  h2.sec::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, var(--sage-300), transparent);
+  }
+
+  .eng {
+    border: 1px solid rgba(147,149,151,.28);
+    border-left: 4px solid var(--sage-400);
+    border-radius: .55rem;
+    background: rgba(255,255,255,.6);
+    padding: 1.4rem 1.5rem;
+    margin-bottom: 1.1rem;
+  }
+  .eng h3 {
+    font-size: 1.08rem; font-weight: 600; margin-bottom: .2rem;
+  }
+  .eng .dur {
+    font-size: .78rem; color: var(--rose-500);
+    letter-spacing: .06em; text-transform: uppercase;
+    margin-bottom: .8rem;
+  }
+  .eng p { font-size: .9rem; line-height: 1.7; color: var(--text-soft); margin-bottom: .8rem; }
+  .eng .lbl {
+    font-size: .74rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--rose-500); font-weight: 600; margin-bottom: .35rem;
+  }
+  .eng ul { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+  .eng li { display: flex; gap: .7rem; font-size: .875rem; line-height: 1.65; color: var(--text-soft); }
+  .eng li::before {
+    content: ''; flex: none; width: .42rem; height: .42rem;
+    border-radius: 50%; background: var(--sage-400); margin-top: .55rem;
+  }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+  @media (max-width: 700px) { .two { grid-template-columns: 1fr; } }
+
+  .prin { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
+  .prin li { display: flex; gap: .7rem; font-size: .9rem; line-height: 1.7; color: var(--text-soft); }
+  .prin li > span { flex: 1; }
+  .prin li::before {
+    content: ''; flex: none; width: .42rem; height: .42rem;
+    border-radius: 50%; background: var(--rose-400); margin-top: .58rem;
+  }
+  .prin strong { font-weight: 600; color: var(--text); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .tag {
+    font-size: .78rem; padding: .3rem .8rem; border-radius: 9999px;
+    background: rgba(201,174,19,.14); color: var(--sage-600);
+    border: 1px solid rgba(201,174,19,.3);
+  }
+
+  .cta {
+    margin-top: 2.5rem;
+    border-radius: .6rem;
+    background: linear-gradient(135deg, #2f2f33 0%, #45454a 55%, #6b6c70 100%);
+    color: #fff; padding: 1.8rem 1.9rem;
+  }
+  .cta h2 {
+    font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: .6rem;
+  }
+  .cta p { font-size: .92rem; line-height: 1.7; color: rgba(255,255,255,.86); margin-bottom: 1.1rem; max-width: 60ch; }
+  .cta a.btn {
+    display: inline-block; background: #f5df4d; color: #1e1e20;
+    font-weight: 600; font-size: .9rem; text-decoration: none;
+    padding: .7rem 1.4rem; border-radius: 9999px;
+  }
+  .cta a.btn:hover { background: #e8ce2b; }
+  .cta a.btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .cta .alt { font-size: .82rem; color: rgba(255,255,255,.7); margin-top: .9rem; }
+  .cta .alt a { color: #f5df4d; }
+
+  footer { max-width: 880px; margin: 0 auto; padding: 2.5rem 2.5rem; }
+  .footer-rule { height: 2px; background: linear-gradient(90deg, var(--sage-300), var(--rose-300), transparent); margin-bottom: 1rem; }
+  footer p { font-size: .74rem; text-align: center; color: var(--text-muted); }
+  footer a { color: var(--sage-600); }
+
+  @media (max-width: 640px) {
+    .header-band { padding: 2.5rem 1.5rem 2rem; }
+    .header-name { font-size: 2.4rem; }
+    .contact-bar { padding: .75rem 1.5rem; }
+    .wrap, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="header-band">
+    <div class="header-blob-1" aria-hidden="true"></div>
+    <div class="header-blob-2" aria-hidden="true"></div>
+    <div class="header-inner">
+      <h1 class="header-name">Design consulting</h1>
+      <p class="header-subtitle">For enterprise products that got complicated, and the teams who have to keep shipping them.</p>
+      <div class="chips">
+        <span class="chip">Available from mid-September 2026</span>
+        <span class="chip">20 to 30 hours per week</span>
+        <span class="chip">Remote, US</span>
+      </div>
+    </div>
+  </div>
+  <div class="contact-bar">
+    <div class="contact-inner">
+      <a href="mailto:alywheale@gmail.com">alywheale@gmail.com</a>
+      <a href="tel:2093990400">(209) 399-0400</a>
+      <a href="aly-wheale-portfolio.html">Selected work</a>
+      <a href="aly-wheale-cv.html">Resume</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <p class="intro">I work on the parts of a product that are hard to make simple: <strong>design systems that have drifted</strong>, <strong>search and filtering nobody can use</strong>, <strong>compliance workflows with legal consequences</strong>, and <strong>machine-learning tooling where the interface has to communicate uncertainty</strong>. Eleven years in enterprise software at HP, Micro Focus and Smarsh, first as a front-end engineer and later leading design. I read the codebase, and I hand over work engineers can build from.</p>
+
+  <h2 class="sec">Engagements</h2>
+
+  <div class="eng">
+    <h3>Design system audit</h3>
+    <p class="dur">Two to four weeks</p>
+    <p>Your component library was right when it was written. Then three teams shipped under deadline, and now there are four buttons, two date pickers and a documentation page nobody trusts. I find the drift, quantify what it is costing you in rebuild time, and give you a structure to converge on.</p>
+    <p class="lbl">You get</p>
+    <ul>
+      <li>An inventory of what exists, what duplicates what, and what is actually in use in production</li>
+      <li>Recommended component structure, variants, states and naming</li>
+      <li>A documentation model your engineers will read</li>
+      <li>A prioritised sequence, so the work can be done in slices rather than a rewrite</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <h3>UX audit of a complex product</h3>
+    <p class="dur">One to two weeks</p>
+    <p>For products where the difficulty is density rather than polish. Search and filtering, dense tables, dashboards, bulk actions, multi-step flows, permissions. I go through it the way your users do, and tell you which problems are costing you the most and which ones only look bad.</p>
+    <p class="lbl">You get</p>
+    <ul>
+      <li>Findings ranked by user cost and implementation cost, not by severity theatre</li>
+      <li>Annotated walkthroughs of the flows that are hurting most</li>
+      <li>Concrete recommendations, with the trade-off named where there is one</li>
+      <li>A short readout session with your product and engineering leads</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <h3>AI and ML tooling interfaces</h3>
+    <p class="dur">Scoped per project</p>
+    <p>Model evaluation and comparison, classification review, human-in-the-loop workflows. The hard question in these products is rarely visual. It is where you set the threshold at which the system decides alone, what you show the person who has to overrule it, and how you communicate confidence without implying certainty you do not have.</p>
+    <p class="lbl">You get</p>
+    <ul>
+      <li>Interface design for evaluation, comparison and review workflows</li>
+      <li>A defensible position on what the machine handles and what escalates to a person</li>
+      <li>Ways of showing error and confidence that survive contact with a regulator</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <h3>Discovery and concept sprint</h3>
+    <p class="dur">About a week</p>
+    <p>You have a written requirement, or an argument that has been going in circles for a month. I turn it into something concrete quickly, so the team can disagree about an artifact instead of a paragraph. I build these fast, using AI tooling where it earns its place, which is why a week is realistic.</p>
+    <p class="lbl">You get</p>
+    <ul>
+      <li>Wireframes or a clickable prototype, depending on what the argument needs</li>
+      <li>The open questions written down, including the ones nobody wanted to raise</li>
+      <li>A recommendation, not just options</li>
+    </ul>
+  </div>
+
+  <div class="eng">
+    <h3>Embedded design support</h3>
+    <p class="dur">Ongoing, part time</p>
+    <p>For teams who need a senior designer in the room but not a full-time hire. I work alongside your front-end engineers at 20 to 30 hours a week, on your tools, in your standups. Prototypes over specifications.</p>
+    <p class="lbl">You get</p>
+    <ul>
+      <li>Design across features as they come up, at a pace your team sets</li>
+      <li>Handover engineers can build from, because I have been one</li>
+      <li>Design system contributions that stay consistent with what you already have</li>
+    </ul>
+  </div>
+
+  <h2 class="sec">How I work</h2>
+  <div class="two">
+    <ul class="prin">
+      <li><span><strong>I write down what I think is wrong before I redesign anything.</strong> If we disagree about the diagnosis, the design is a waste of both our time.</span></li>
+      <li><span><strong>I do not remove things quietly.</strong> In regulated products, a control that vanished is a support ticket at best and an audit finding at worst.</span></li>
+      <li><span><strong>Suggest, never assume.</strong> A filter the user did not knowingly apply is a defect, not a convenience.</span></li>
+    </ul>
+    <ul class="prin">
+      <li><span><strong>I hand over work engineers can build.</strong> Eleven years of shipping alongside front-end teams, four of them writing the code myself.</span></li>
+      <li><span><strong>I tell you when a thing is not worth doing.</strong> Including when it is the thing you hired me for.</span></li>
+      <li><span><strong>Fixed scope where I can price it honestly</strong>, hourly where the work is genuinely open ended.</span></li>
+    </ul>
+  </div>
+
+  <h2 class="sec">Where I am useful</h2>
+  <div class="tags">
+    <span class="tag">Compliance, archiving and supervision</span>
+    <span class="tag">Enterprise search</span>
+    <span class="tag">ML and AI model tooling</span>
+    <span class="tag">Speech analytics and NLP</span>
+    <span class="tag">Contact-centre quality management</span>
+    <span class="tag">Financial services</span>
+    <span class="tag">B2B SaaS</span>
+    <span class="tag">Design systems at scale</span>
+  </div>
+
+  <div class="cta">
+    <h2>Starting a conversation</h2>
+    <p>Tell me what is going wrong and I will tell you whether I am the right person for it. If I am not, I will usually be able to say what kind of person is. Available from mid-September 2026, 20 to 30 hours a week, fully remote across the US.</p>
+    <a class="btn" href="mailto:alywheale@gmail.com?subject=Design%20consulting%20enquiry">Email me</a>
+    <p class="alt">Or see <a href="aly-wheale-portfolio.html">selected work</a> first.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-rule" aria-hidden="true"></div>
+  <p>Aly Wheale &middot; Greater Boston &middot; <a href="mailto:alywheale@gmail.com">alywheale@gmail.com</a> &middot; <a href="https://alywheale.com">alywheale.com</a></p>
+</footer>
+
+</body>
+</html>
