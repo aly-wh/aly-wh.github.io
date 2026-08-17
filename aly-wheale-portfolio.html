@@ -694,6 +694,11 @@
       <h3>Why I built it</h3>
       <p>I spent three years designing agent evaluation and appeals at Soho Squared, before this level of automation was practical. I wanted to work out what the interface looks like once it is, so I built a running concept rather than writing an opinion piece about it.</p>
 
+      <figure>
+        <img src="images/07-talos-desktop.jpg" alt="Compliance overview dashboard: calls analysed, average score, flagged and auto-resolved, with an agent leaderboard and a feed of recent evaluations" loading="lazy" />
+        <figcaption>The overview. Four numbers across the top, and the fourth one — 89 percent auto-resolved, no human review — is the one the whole product turns on.</figcaption>
+      </figure>
+
       <h3>The threshold problem</h3>
       <p>The dashboard leads with four numbers: calls analysed, average score, flagged, and auto-resolved. The fourth one is the interesting one. It reads 89 percent, and underneath it says <em>no human review</em>.</p>
       <p>That number is a policy decision wearing the costume of a metric. Push it up and you save supervisor hours, and you also accept that some proportion of wrong evaluations will reach an agent's record with nobody having checked. Push it down and you have rebuilt the sampling problem with extra steps.</p>
@@ -709,6 +714,30 @@
         <li><strong>Calibration.</strong> The part most tools leave out. Human evaluators disagree with each other, and if you are going to train a model on their judgments you need to know by how much. Calibration is a first-class section, not a settings page.</li>
       </ul>
 
+      <figure>
+        <img src="images/07-talos-calibration.jpg" alt="Calibration sessions listed with date, evaluator panel, target call and measured variance between evaluators" loading="lazy" />
+        <figcaption>Calibration as its own section. Each session records who scored, against which call, and how far apart they landed. Variance is the number that tells you whether the training data is worth anything.</figcaption>
+      </figure>
+
+      <h3>The same system on a phone</h3>
+      <p>The concept carries a desktop and a mobile expression of the same product, and the interesting part was deciding what does not survive the trip. A supervisor at a desk is reviewing and deciding. A supervisor on a phone is between things, and usually looking because something has already gone wrong.</p>
+      <p>So the mobile build is not the desktop one reflowed. The four summary numbers stack into a two-by-two, the leaderboard drops its detail columns, and the five sections move to a bottom tab bar within thumb reach. What gets kept at full weight is the evaluation state, the AI confidence bar and the named findings, because those are the things you would pick the phone up for. What gets dropped is anything that exists to support a decision you would not make while standing up.</p>
+
+      <figure>
+        <div class="fig-grid fig-grid-3">
+          <img src="images/07-talos-m-home.jpg" alt="Mobile compliance overview with stacked stat cards and a bottom tab bar" loading="lazy" />
+          <img src="images/07-talos-m-evals.jpg" alt="Mobile evaluations list, each with score, status, AI confidence bar and named findings" loading="lazy" />
+          <img src="images/07-talos-m-assist.jpg" alt="Mobile live agent assist with sentiment meter, active alerts and suggested actions" loading="lazy" />
+        </div>
+        <figcaption>Mobile: the overview, the evaluations list with AI confidence carried on every row, and live agent assist during a call.</figcaption>
+      </figure>
+
+      <div class="pull">
+        <p><strong>Confidence belongs on the row, not in a detail view.</strong> Every evaluation shows what the model scored <em>and</em> how sure it was. A 71 at 82 percent confidence and a 71 at 97 percent confidence are different objects and should be triaged differently, and if you have to open a record to find that out, nobody will.</p>
+      </div>
+
+      <p>Agent assist is the one surface here I had designed before, and it is the one that changes most on a phone. It runs live, mid-call, for someone who can spare a glance and not a read — so sentiment is a position on a track rather than a number, the alerts are shape and colour before they are text, and the suggested actions are large enough to hit without looking. That constraint is the same one a consumer app faces on a phone in a hand. It just arrives wearing a headset.</p>
+
       <h3>How it was made</h3>
       <p>Built with AI tooling rather than drawn frame by frame. The domain model is mine, informed by the evaluation and appeals work I did at Soho Squared, and the build is a working front end I directed and corrected rather than a static mockup. I am explicit about this because the method is part of the offer: turning a written requirement into something arguable inside a week is a service I sell, and this is what that looks like.</p>
 
@@ -718,7 +747,7 @@
     <section class="case" id="supporting">
       <p class="case-num">07</p>
       <h2>Supporting work</h2>
-      <p class="case-stand">Shorter pieces worth a page rather than a full study.</p>
+      <p class="case-stand">Shorter pieces worth a page rather than a full study, and two 2026 concept builds.</p>
 
       <h3>Policy prioritisation, Smarsh</h3>
       <p>Compliance policies scan communications in a defined order, from the bottom of the list upward, and a higher-priority policy can override the actions of a lower one. Policies can also depend on each other, and some short-circuit the rest of the chain.</p>
@@ -741,6 +770,32 @@
         </div>
         <figcaption>Policy prioritisation with its permanent icon legend, the cases dashboard with hold and export states, and the Answer Bank triage queue.</figcaption>
       </figure>
+
+      <h3>FoundryInk, concept build, 2026</h3>
+      <p>A studio and publishing tool for independent comics creators: projects and issues, collaborators with named roles, revenue and crowdfunding, audience, and a publish flow. It came out of my own contract illustration work, where the production side is handled by a stack of unconnected tools and a spreadsheet.</p>
+      <p>The design problem is that a creator studio has two audiences inside one product. Making an issue is close work — pages, letters, revisions, a small team with different jobs. Running the studio is portfolio work — which title is earning, which campaign ends this week, what is overdue. I kept those on separate levels rather than one merged dashboard, so the studio home answers <em>what needs me today</em> and the project answers <em>what is this thing</em>. The home screen leads with what is wrong, not with what exists.</p>
+
+      <figure>
+        <div class="fig-grid fig-grid-2">
+          <img src="images/09-foundry-home.jpg" alt="FoundryInk studio home: subscriber and revenue totals, a needs-attention band, the project list and a task queue" loading="lazy" />
+          <img src="images/09-foundry-project.jpg" alt="FoundryInk project page with issue list, publish state, stats and named collaborators" loading="lazy" />
+        </div>
+        <figcaption>The two levels. Studio home opens on what needs attention — an overdue issue, a campaign about to close — before it shows the portfolio. The project page is the close work: issues, publish state, and the team credited by role.</figcaption>
+      </figure>
+
+      <h3>Study tracker, concept build, 2026</h3>
+      <p>A mobile-native habit tracker for exam revision. I built it deliberately as the opposite of the work I usually do: nobody has to open it, nothing bad happens if they close it, and the entire design problem is motivation rather than information.</p>
+      <p>Which makes it an exercise in the mechanics that actually drive that — a streak count, a daily goal shown as proportion completed rather than time elapsed, per-subject rings, and a focus timer that commits you to one subject before it starts. The honest tension is that every one of those devices can tip from encouraging into punishing, and a streak in particular punishes exactly the person who most needs to come back after missing a day.</p>
+
+      <figure>
+        <div class="fig-grid fig-grid-2">
+          <img src="images/08-study-home.jpg" alt="Study dashboard with streak count, daily goal ring and per-subject progress" loading="lazy" />
+          <img src="images/08-study-focus.jpg" alt="Focus timer with subject selection before a session starts" loading="lazy" />
+        </div>
+        <figcaption>Daily goal as proportion completed rather than time elapsed, and the focus timer, which makes you commit to one subject before it will start.</figcaption>
+      </figure>
+
+      <p class="conf">FoundryInk and the study tracker are self-initiated concept builds, not client work. Content shown is invented.</p>
     </section>
 
   </div>
